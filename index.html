@@ -3,21 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slider Mobile</title>
+  <title>Slide mobile</title>
   <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
+    body { margin: 0; overflow: hidden; }
     .slider {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      width: 600vw;
+      transition: transform 0.5s ease;
     }
     .slide {
-      min-width: 100vw;
+      width: 100vw;
       height: 100vh;
       background-size: cover;
       background-position: center;
@@ -29,34 +24,36 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
+      z-index: 1;
     }
     .nav button {
       background: rgba(0,0,0,0.4);
-      border: none;
       color: white;
       font-size: 2rem;
-      padding: 10px 20px;
-      cursor: pointer;
+      border: none;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
-
-<div class="slider" id="slider">
-  <div class="slide" style="background-image: url('images/slide1.jpg')"></div>
-  <div class="slide" style="background-image: url('images/slide2.jpg')"></div>
-  <div class="slide" style="background-image: url('images/slide3.jpg')"></div>
-  <!-- Ajoute d'autres slides ici -->
-</div>
 
 <div class="nav">
   <button onclick="prevSlide()">❮</button>
   <button onclick="nextSlide()">❯</button>
 </div>
 
+<div class="slider" id="slider">
+  <div class="slide" style="background-image: url('1.jpg')"></div>
+  <div class="slide" style="background-image: url('2.jpg')"></div>
+  <div class="slide" style="background-image: url('3.jpg')"></div>
+  <div class="slide" style="background-image: url('4.jpg')"></div>
+  <div class="slide" style="background-image: url('5.jpg')"></div>
+  <div class="slide" style="background-image: url('6.jpg')"></div>
+</div>
+
 <script>
   const slider = document.getElementById('slider');
-  const totalSlides = slider.children.length;
+  const totalSlides = 6;
   let index = 0;
 
   function showSlide(i) {
@@ -73,17 +70,12 @@
     showSlide(index);
   }
 
-  // Slide automatique toutes les 3 secondes
-  setInterval(nextSlide, 3000);
+  setInterval(nextSlide, 4000);
 
-  // Gestion du swipe tactile
   let startX = 0;
-  slider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  slider.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
+  slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  slider.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
     if (startX - endX > 50) nextSlide();
     else if (endX - startX > 50) prevSlide();
   });
