@@ -11,7 +11,7 @@
       background: black;
     }
 
-    /* === Effet d'entrée cinématique === */
+    /* Effet d'entrée cinématique */
     .starter {
       position: fixed;
       top: 0;
@@ -52,7 +52,7 @@
     .slide {
       width: 100vw;
       height: 100vh;
-      background-size: cover; /* plein écran sans bande noire */
+      background-size: cover; /* Plein écran sans bande noire */
       background-position: center;
       background-repeat: no-repeat;
       background-color: black;
@@ -87,16 +87,16 @@
 </head>
 <body>
 
-  <!-- Effet de démarrage -->
+  <!-- Animation d'entrée -->
   <div class="starter"></div>
 
-  <!-- Flèches de navigation -->
+  <!-- Navigation flèches -->
   <div class="nav">
     <button onclick="prevSlide()">❮</button>
     <button onclick="nextSlide()">❯</button>
   </div>
 
-  <!-- Slider -->
+  <!-- Slides -->
   <div class="slider" id="slider">
     <div class="slide" style="background-image: url('1.jpg')"></div>
     <div class="slide" style="background-image: url('2.jpg')"></div>
@@ -124,10 +124,10 @@
       showSlide(index);
     }
 
-    // Auto-slide
+    // Slide auto toutes les 4 secondes
     setInterval(nextSlide, 4000);
 
-    // Swipe mobile
+    // Swipe tactile
     let startX = 0;
     slider.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
