@@ -11,7 +11,7 @@
       background: black;
     }
 
-    /* Effet d'entrée cinématique */
+    /* Effet d'ouverture plus classe */
     .starter {
       position: fixed;
       top: 0;
@@ -20,25 +20,47 @@
       height: 100vh;
       background-color: black;
       z-index: 10;
-      animation: ouverture 2s ease forwards;
+      animation: reveal 2.2s ease-out forwards;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
-    @keyframes ouverture {
+    .starter::before {
+      content: '';
+      position: absolute;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, white 0%, black 40%);
+      opacity: 0.08;
+      animation: glow 2.2s ease-in-out forwards;
+      transform: scale(0.8);
+      border-radius: 50%;
+    }
+
+    @keyframes glow {
+      0% { opacity: 0; transform: scale(1.5); filter: blur(60px); }
+      50% { opacity: 0.1; transform: scale(1); filter: blur(20px); }
+      100% { opacity: 0; transform: scale(0.5); filter: blur(0px); }
+    }
+
+    @keyframes reveal {
       0% {
+        opacity: 1;
+        transform: scale(1.2);
+        filter: blur(30px);
         clip-path: circle(0% at 50% 50%);
-        filter: blur(20px);
-        opacity: 1;
       }
-      80% {
-        clip-path: circle(120% at 50% 50%);
-        filter: blur(0px);
-        opacity: 1;
+      60% {
+        clip-path: circle(130% at 50% 50%);
+        filter: blur(5px);
+        transform: scale(1);
       }
       100% {
         opacity: 0;
+        clip-path: circle(150% at 50% 50%);
+        filter: blur(0);
         display: none;
       }
     }
@@ -46,13 +68,13 @@
     .slider {
       display: flex;
       transition: transform 0.5s ease;
-      width: 500vw; /* 5 slides */
+      width: 500vw;
     }
 
     .slide {
       width: 100vw;
       height: 100vh;
-      background-size: cover; /* Plein écran sans bande noire */
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-color: black;
@@ -87,16 +109,16 @@
 </head>
 <body>
 
-  <!-- Animation d'entrée -->
+  <!-- Effet d’ouverture stylé -->
   <div class="starter"></div>
 
-  <!-- Navigation flèches -->
+  <!-- Flèches navigation -->
   <div class="nav">
     <button onclick="prevSlide()">❮</button>
     <button onclick="nextSlide()">❯</button>
   </div>
 
-  <!-- Slides -->
+  <!-- Slider -->
   <div class="slider" id="slider">
     <div class="slide" style="background-image: url('1.jpg')"></div>
     <div class="slide" style="background-image: url('2.jpg')"></div>
