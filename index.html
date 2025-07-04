@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slide mobile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slider Responsive</title>
   <style>
-    body { margin: 0; overflow: hidden; }
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
     .slider {
       display: flex;
-      width: 600vw;
       transition: transform 0.5s ease;
+      width: 600vw; /* 6 slides x 100vw */
     }
+
     .slide {
       width: 100vw;
       height: 100vh;
       background-size: cover;
       background-position: center;
+      flex-shrink: 0;
     }
+
     .nav {
       position: absolute;
       top: 50%;
@@ -26,60 +33,73 @@
       transform: translateY(-50%);
       z-index: 1;
     }
+
     .nav button {
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.5);
       color: white;
-      font-size: 2rem;
+      font-size: 3rem;
       border: none;
-      padding: 10px;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+    }
+
+    .nav button:hover {
+      background: rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
 <body>
 
-<div class="nav">
-  <button onclick="prevSlide()">❮</button>
-  <button onclick="nextSlide()">❯</button>
-</div>
+  <div class="nav">
+    <button onclick="prevSlide()">❮</button>
+    <button onclick="nextSlide()">❯</button>
+  </div>
 
-<div class="slider" id="slider">
-  <div class="slide" style="background-image: url('1.jpg')"></div>
-  <div class="slide" style="background-image: url('2.jpg')"></div>
-  <div class="slide" style="background-image: url('3.jpg')"></div>
-  <div class="slide" style="background-image: url('4.jpg')"></div>
-  <div class="slide" style="background-image: url('5.jpg')"></div>
-  <div class="slide" style="background-image: url('6.jpg')"></div>
-</div>
+  <div class="slider" id="slider">
+    <div class="slide" style="background-image: url('1.jpg')"></div>
+    <div class="slide" style="background-image: url('2.jpg')"></div>
+    <div class="slide" style="background-image: url('3.jpg')"></div>
+    <div class="slide" style="background-image: url('4.jpg')"></div>
+    <div class="slide" style="background-image: url('5.jpg')"></div>
+    <div class="slide" style="background-image: url('6.jpg')"></div>
+  </div>
 
-<script>
-  const slider = document.getElementById('slider');
-  const totalSlides = 6;
-  let index = 0;
+  <script>
+    const slider = document.getElementById('slider');
+    const totalSlides = 6;
+    let index = 0;
 
-  function showSlide(i) {
-    slider.style.transform = `translateX(${-i * 100}vw)`;
-  }
+    function showSlide(i) {
+      slider.style.transform = `translateX(${-i * 100}vw)`;
+    }
 
-  function nextSlide() {
-    index = (index + 1) % totalSlides;
-    showSlide(index);
-  }
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      showSlide(index);
+    }
 
-  function prevSlide() {
-    index = (index - 1 + totalSlides) % totalSlides;
-    showSlide(index);
-  }
+    function prevSlide() {
+      index = (index - 1 + totalSlides) % totalSlides;
+      showSlide(index);
+    }
 
-  setInterval(nextSlide, 4000);
+    // Slide automatique toutes les 4 secondes
+    setInterval(nextSlide, 4000);
 
-  let startX = 0;
-  slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-  slider.addEventListener('touchend', e => {
-    let endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) nextSlide();
-    else if (endX - startX > 50) prevSlide();
-  });
-</script>
+    // Swipe tactile (mobile)
+    let startX = 0;
+    slider.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) nextSlide();
+      else if (endX - startX > 50) prevSlide();
+    });
+  </script>
 
 </body>
 </html>
