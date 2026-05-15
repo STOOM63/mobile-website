@@ -1,6 +1,3 @@
-# index.html — STOOM Clermont-Ferrand
-
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>STOOM Clermont-Ferrand | Cigarettes électroniques & conseil en boutique</title>
+
   <meta name="description" content="STOOM Clermont-Ferrand — Boutique spécialisée en cigarettes électroniques, e-liquides auvergnats et conseil personnalisé. Pas de vente en ligne : un accompagnement humain en magasin." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -26,15 +26,15 @@
     }
 
     body{
-      font-family:'Montserrat', Arial, sans-serif;
+      font-family:'Montserrat', sans-serif;
       background:#0a0908;
       color:#f5eee6;
       overflow-x:hidden;
     }
 
     a{
-      color:inherit;
       text-decoration:none;
+      color:inherit;
     }
 
     img{
@@ -67,7 +67,6 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:30px;
     }
 
     .logo{
@@ -78,17 +77,17 @@
 
     .logo strong{
       font-size:2.1rem;
-      letter-spacing:3px;
       font-weight:900;
+      letter-spacing:3px;
     }
 
     .logo span{
       margin-top:5px;
-      font-size:0.68rem;
+      font-size:0.7rem;
       letter-spacing:2px;
       color:#d4aa6a;
-      font-weight:700;
       text-transform:uppercase;
+      font-weight:700;
     }
 
     nav{
@@ -96,9 +95,9 @@
       align-items:center;
       gap:28px;
       font-size:0.82rem;
+      font-weight:800;
       text-transform:uppercase;
       letter-spacing:1px;
-      font-weight:800;
     }
 
     nav a{
@@ -113,21 +112,23 @@
 
     .nav-cta{
       padding:13px 18px;
-      border:1px solid rgba(212,170,106,0.7);
       border-radius:999px;
+      border:1px solid rgba(212,170,106,0.7);
       color:#d4aa6a;
     }
 
     .hero{
-      position:relative;
       min-height:100vh;
       padding-top:82px;
       display:flex;
       align-items:center;
+      position:relative;
+
       background:
-        radial-gradient(circle at 76% 28%, rgba(212,170,106,0.18), transparent 24%),
-        linear-gradient(90deg, rgba(7,6,5,0.97) 0%, rgba(7,6,5,0.88) 42%, rgba(7,6,5,0.35) 100%),
-        url("images/fond-boutique-stoom.jpg");
+      radial-gradient(circle at 76% 28%, rgba(212,170,106,0.18), transparent 24%),
+      linear-gradient(90deg, rgba(7,6,5,0.97) 0%, rgba(7,6,5,0.88) 42%, rgba(7,6,5,0.35) 100%),
+      url("fond-boutique-stoom.jpg");
+
       background-size:cover;
       background-position:center;
     }
@@ -135,10 +136,11 @@
     .hero::after{
       content:"";
       position:absolute;
-      inset:auto 0 0 0;
+      left:0;
+      right:0;
+      bottom:0;
       height:160px;
       background:linear-gradient(to bottom, transparent, #0a0908);
-      pointer-events:none;
     }
 
     .hero-content{
@@ -150,26 +152,27 @@
 
     .eyebrow{
       display:inline-flex;
-      gap:10px;
       align-items:center;
-      background:rgba(212,170,106,0.12);
-      border:1px solid rgba(212,170,106,0.35);
-      color:#e8c58d;
       padding:11px 16px;
       border-radius:999px;
+      background:rgba(212,170,106,0.12);
+      border:1px solid rgba(212,170,106,0.35);
+
+      color:#e8c58d;
       font-size:0.78rem;
       font-weight:800;
       letter-spacing:1.4px;
       text-transform:uppercase;
+
       margin-bottom:28px;
     }
 
     .hero h1{
       font-size:clamp(3rem, 6vw, 6.7rem);
       line-height:0.92;
+      font-weight:900;
       letter-spacing:-3px;
       text-transform:uppercase;
-      font-weight:900;
       margin-bottom:28px;
     }
 
@@ -179,39 +182,43 @@
     }
 
     .hero p{
-      max-width:690px;
       color:#e4dbd2;
-      font-size:1.08rem;
       line-height:1.85;
+      font-size:1.08rem;
       margin-bottom:34px;
+      max-width:690px;
     }
 
     .hero-alert{
-      max-width:760px;
+      background:linear-gradient(135deg, rgba(245,238,230,0.98), rgba(221,205,181,0.96));
+      color:#15110d;
+
+      border-radius:26px;
+      padding:28px;
+
       display:grid;
       grid-template-columns:auto 1fr;
       gap:18px;
-      align-items:flex-start;
-      background:linear-gradient(135deg, rgba(245,238,230,0.98), rgba(221,205,181,0.96));
-      color:#15110d;
-      padding:28px;
-      border-radius:26px;
-      box-shadow:0 26px 90px rgba(0,0,0,0.45);
+
       margin-bottom:34px;
-      border:1px solid rgba(255,255,255,0.5);
+
+      box-shadow:0 26px 90px rgba(0,0,0,0.45);
     }
 
     .hero-alert-icon{
       width:58px;
       height:58px;
       border-radius:18px;
+
       background:#111;
       color:#d4aa6a;
+
       display:flex;
       align-items:center;
       justify-content:center;
+
       font-size:1.6rem;
-      flex-shrink:0;
+      font-weight:900;
     }
 
     .hero-alert h2{
@@ -219,7 +226,6 @@
       line-height:1.1;
       text-transform:uppercase;
       margin-bottom:9px;
-      letter-spacing:-0.5px;
     }
 
     .hero-alert p{
@@ -236,14 +242,15 @@
     }
 
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
       min-height:56px;
       padding:0 28px;
       border-radius:999px;
+
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
       font-weight:900;
-      letter-spacing:0.4px;
       transition:0.25s;
     }
 
@@ -253,14 +260,13 @@
     }
 
     .btn-primary:hover{
-      transform:translateY(-3px);
       background:#edc486;
+      transform:translateY(-3px);
     }
 
     .btn-outline{
       border:1px solid rgba(255,255,255,0.22);
       background:rgba(255,255,255,0.05);
-      color:#fff;
     }
 
     .btn-outline:hover{
@@ -277,10 +283,11 @@
     .strip-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
+
       background:#151210;
-      border:1px solid rgba(255,255,255,0.08);
       border-radius:28px;
       overflow:hidden;
+
       box-shadow:0 24px 70px rgba(0,0,0,0.45);
     }
 
@@ -303,7 +310,6 @@
     .strip-item span{
       color:#cfc4b9;
       font-size:0.9rem;
-      line-height:1.5;
     }
 
     section{
@@ -311,24 +317,23 @@
     }
 
     .section-title{
+      text-align:center;
       max-width:780px;
       margin:0 auto 62px;
-      text-align:center;
     }
 
     .section-title .label{
       color:#d4aa6a;
-      text-transform:uppercase;
       font-size:0.8rem;
-      letter-spacing:2px;
       font-weight:900;
+      letter-spacing:2px;
+      text-transform:uppercase;
       margin-bottom:16px;
     }
 
     .section-title h2{
       font-size:clamp(2.1rem, 4vw, 4rem);
       line-height:1.04;
-      letter-spacing:-1.5px;
       text-transform:uppercase;
       margin-bottom:18px;
     }
@@ -336,7 +341,6 @@
     .section-title p{
       color:#cfc4b9;
       line-height:1.8;
-      font-size:1rem;
     }
 
     .no-online{
@@ -353,32 +357,35 @@
 
     .no-online-image{
       background:
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44)),
-        url("images/conseil-client-stoom.jpg");
+      linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44)),
+      url("conseil-client-stoom.jpg");
+
       background-size:cover;
       background-position:center;
     }
 
     .no-online-content{
       padding:90px 8vw 90px 70px;
+
       display:flex;
       flex-direction:column;
       justify-content:center;
     }
 
     .big-badge{
-      display:inline-flex;
-      align-items:center;
       width:max-content;
-      gap:10px;
+
       background:#16120e;
       color:#f2eadf;
+
       padding:13px 18px;
       border-radius:999px;
+
       font-size:0.8rem;
       font-weight:900;
-      text-transform:uppercase;
       letter-spacing:1.3px;
+      text-transform:uppercase;
+
       margin-bottom:26px;
     }
 
@@ -386,7 +393,6 @@
       font-size:clamp(2.5rem, 5vw, 5.2rem);
       line-height:0.95;
       text-transform:uppercase;
-      letter-spacing:-2px;
       margin-bottom:28px;
     }
 
@@ -399,42 +405,40 @@
       line-height:1.85;
       color:#3b3026;
       margin-bottom:32px;
-      max-width:760px;
     }
 
     .reason-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:18px;
-      margin-top:10px;
     }
 
     .reason{
       background:#fffaf3;
-      border:1px solid rgba(22,18,14,0.08);
       border-radius:22px;
       padding:24px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.06);
     }
 
     .reason strong{
       display:block;
-      font-size:1.05rem;
       margin-bottom:8px;
+      font-size:1.05rem;
     }
 
     .reason p{
       color:#4d4034;
-      line-height:1.65;
       font-size:0.92rem;
+      line-height:1.65;
     }
 
     .quote-line{
       margin-top:34px;
       padding:24px 28px;
+
       border-left:5px solid #a17435;
+
       background:rgba(161,116,53,0.1);
-      border-radius:0 20px 20px 0;
+
       font-size:1.35rem;
       font-weight:800;
       line-height:1.45;
@@ -451,19 +455,14 @@
     }
 
     .product-card{
-      position:relative;
       overflow:hidden;
-      min-height:330px;
       border-radius:30px;
       background:#151210;
-      border:1px solid rgba(255,255,255,0.08);
-      box-shadow:0 18px 60px rgba(0,0,0,0.25);
     }
 
     .product-card img{
       height:190px;
       object-fit:cover;
-      filter:saturate(0.9) contrast(1.05);
     }
 
     .product-card-content{
@@ -471,7 +470,6 @@
     }
 
     .product-card h3{
-      font-size:1.2rem;
       text-transform:uppercase;
       margin-bottom:10px;
     }
@@ -494,10 +492,8 @@
     }
 
     .experience-photo{
-      border-radius:34px;
       overflow:hidden;
-      box-shadow:0 28px 80px rgba(0,0,0,0.45);
-      border:1px solid rgba(255,255,255,0.08);
+      border-radius:34px;
     }
 
     .experience-photo img{
@@ -516,7 +512,6 @@
       font-size:clamp(2rem, 4vw, 3.7rem);
       line-height:1;
       text-transform:uppercase;
-      letter-spacing:-1.4px;
       margin-bottom:24px;
     }
 
@@ -529,13 +524,12 @@
     .check-list{
       display:grid;
       gap:14px;
-      margin-top:28px;
     }
 
     .check{
       display:flex;
-      align-items:flex-start;
       gap:13px;
+      align-items:flex-start;
       font-weight:700;
       color:#241d17;
     }
@@ -543,14 +537,17 @@
     .check span{
       width:25px;
       height:25px;
+
       border-radius:50%;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+
       background:#16120e;
       color:#d4aa6a;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
       flex-shrink:0;
-      font-size:0.8rem;
     }
 
     .reviews{
@@ -561,30 +558,26 @@
       display:grid;
       grid-template-columns:0.75fr 1.25fr;
       gap:36px;
-      align-items:stretch;
     }
 
     .rating-card{
       background:linear-gradient(160deg, #1b1713, #0f0d0b);
-      border:1px solid rgba(212,170,106,0.24);
       border-radius:34px;
       padding:42px;
+
       display:flex;
       flex-direction:column;
       justify-content:center;
-      min-height:340px;
     }
 
     .rating-card .stars{
       color:#ffc766;
       font-size:2.1rem;
-      letter-spacing:3px;
       margin-bottom:18px;
     }
 
     .rating-card h3{
       font-size:4.4rem;
-      line-height:1;
       color:#d4aa6a;
       margin-bottom:8px;
     }
@@ -602,7 +595,6 @@
 
     .review{
       background:#151210;
-      border:1px solid rgba(255,255,255,0.07);
       border-radius:28px;
       padding:28px;
     }
@@ -615,12 +607,7 @@
     .review p{
       color:#d5cabf;
       line-height:1.75;
-      font-size:0.95rem;
       margin-bottom:18px;
-    }
-
-    .review strong{
-      color:#fff;
     }
 
     .contact{
@@ -636,11 +623,9 @@
 
     .contact-card,
     .map-card{
+      background:#fffaf3;
       border-radius:34px;
       overflow:hidden;
-      background:#fffaf3;
-      box-shadow:0 24px 70px rgba(0,0,0,0.1);
-      border:1px solid rgba(0,0,0,0.08);
     }
 
     .contact-card{
@@ -649,7 +634,6 @@
 
     .contact-card h2{
       font-size:2.6rem;
-      line-height:1;
       text-transform:uppercase;
       margin-bottom:24px;
     }
@@ -664,15 +648,17 @@
       display:grid;
       grid-template-columns:42px 1fr;
       gap:14px;
-      align-items:flex-start;
     }
 
     .info-icon{
       width:42px;
       height:42px;
+
       border-radius:14px;
+
       background:#16120e;
       color:#d4aa6a;
+
       display:flex;
       align-items:center;
       justify-content:center;
@@ -693,25 +679,24 @@
       height:100%;
       min-height:520px;
       border:0;
-      filter:grayscale(0.9) contrast(1.05);
     }
 
     footer{
       background:#080706;
       color:#a99f94;
-      border-top:1px solid rgba(255,255,255,0.08);
       padding:40px 0;
-      font-size:0.9rem;
+      border-top:1px solid rgba(255,255,255,0.08);
     }
 
     .footer-inner{
       display:flex;
       justify-content:space-between;
-      gap:20px;
       flex-wrap:wrap;
+      gap:20px;
     }
 
     @media(max-width:1100px){
+
       nav{
         display:none;
       }
@@ -729,48 +714,12 @@
         grid-template-columns:1fr;
       }
 
-      .no-online-image{
-        min-height:420px;
-      }
-
-      .no-online-content{
-        padding:70px 6vw;
-      }
-
-      .experience-photo img{
-        height:460px;
-      }
     }
 
     @media(max-width:720px){
-      .nav{
-        height:74px;
-      }
-
-      .logo strong{
-        font-size:1.65rem;
-      }
-
-      .hero{
-        min-height:auto;
-        background-position:center right;
-      }
-
-      .hero-content{
-        padding:70px 0 110px;
-      }
 
       .hero-alert{
         grid-template-columns:1fr;
-        padding:24px;
-      }
-
-      .hero h1{
-        letter-spacing:-1.5px;
-      }
-
-      .strip{
-        margin-top:-35px;
       }
 
       .strip-grid,
@@ -780,45 +729,31 @@
         grid-template-columns:1fr;
       }
 
-      .strip-item{
-        border-right:none;
-        border-bottom:1px solid rgba(255,255,255,0.08);
-      }
-
-      .strip-item:last-child{
-        border-bottom:none;
-      }
-
       section{
-        padding:78px 0;
+        padding:80px 0;
       }
 
-      .experience-card,
+      .hero h1{
+        letter-spacing:-1px;
+      }
+
       .contact-card,
+      .experience-card,
       .rating-card{
         padding:32px;
-        border-radius:26px;
       }
 
-      .product-card{
-        min-height:auto;
-      }
-
-      .product-card img{
-        height:220px;
-      }
-
-      iframe{
-        min-height:390px;
-      }
     }
+
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="container nav">
-    <a href="#accueil" class="logo" aria-label="STOOM Clermont-Ferrand">
+
+    <a href="#accueil" class="logo">
       <strong>ST<span class="gold">OO</span>M</strong>
       <span>Clermont-Ferrand</span>
     </a>
@@ -831,280 +766,96 @@
       <a href="#avis">Avis</a>
       <a href="#contact" class="nav-cta">Nous trouver</a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
-  <section class="hero" id="accueil">
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">Boutique spécialisée · Clermont-Ferrand</div>
+<section class="hero" id="accueil">
 
-        <h1>
-          La vape,
-          <span>avec du conseil.</span>
-        </h1>
+  <div class="container">
 
-        <p>
-          STOOM Clermont-Ferrand vous accompagne en boutique pour choisir une cigarette électronique, un e-liquide, un dosage et un tirage adaptés à votre profil. Ici, l'objectif n'est pas de vendre vite : c'est de vendre juste.
-        </p>
+    <div class="hero-content">
 
-        <div class="hero-alert">
-          <div class="hero-alert-icon">✕</div>
-          <div>
-            <h2>Nous ne faisons pas de vente en ligne</h2>
-            <p>
-              Parce qu'une cigarette électronique ne se choisit pas comme un simple produit en rayon. Le bon matériel dépend de votre consommation, de votre besoin en nicotine, de votre tirage et de votre confort. Nous préférons vous conseiller en magasin plutôt que de vous laisser commander un produit mal adapté.
-            </p>
-          </div>
+      <div class="eyebrow">
+        Boutique spécialisée · Clermont-Ferrand
+      </div>
+
+      <h1>
+        La vape,
+        <span>avec du conseil.</span>
+      </h1>
+
+      <p>
+        STOOM Clermont-Ferrand vous accompagne en boutique pour choisir une cigarette électronique, un e-liquide, un dosage et un tirage adaptés à votre profil.
+      </p>
+
+      <div class="hero-alert">
+
+        <div class="hero-alert-icon">✕</div>
+
+        <div>
+
+          <h2>
+            Nous ne faisons pas de vente en ligne
+          </h2>
+
+          <p>
+            Parce qu'une cigarette électronique ne se choisit pas comme un simple produit en rayon. Le bon matériel dépend de votre consommation, de votre besoin en nicotine, de votre tirage et de votre confort.
+          </p>
+
         </div>
 
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Venir en boutique</a>
-          <a href="#pas-de-vente-en-ligne" class="btn btn-outline">Pourquoi pas en ligne ?</a>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <div class="container strip">
-    <div class="strip-grid">
-      <div class="strip-item">
-        <strong>4,9/5</strong>
-        <span>Note Google moyenne</span>
+      <div class="hero-buttons">
+
+        <a href="#contact" class="btn btn-primary">
+          Venir en boutique
+        </a>
+
+        <a href="#pas-de-vente-en-ligne" class="btn btn-outline">
+          Pourquoi pas en ligne ?
+        </a>
+
       </div>
-      <div class="strip-item">
-        <strong>600+</strong>
-        <span>Avis clients</span>
-      </div>
-      <div class="strip-item">
-        <strong>100%</strong>
-        <span>Conseil en boutique</span>
-      </div>
-      <div class="strip-item">
-        <strong>FP</strong>
-        <span>E-liquides auvergnats Flavour Power</span>
-      </div>
+
     </div>
+
   </div>
 
-  <section class="no-online" id="pas-de-vente-en-ligne">
-    <div class="no-online-wrap">
-      <div class="no-online-image" aria-label="Conseil client en boutique STOOM"></div>
+</section>
 
-      <div class="no-online-content">
-        <div class="big-badge">Pas de panier · Pas d'expédition · Du vrai conseil</div>
+<div class="container strip">
 
-        <h2>
-          Pas de vente en ligne.
-          <span>Et ce n'est pas un hasard.</span>
-        </h2>
+  <div class="strip-grid">
 
-        <p>
-          Chez STOOM, nous pensons qu'un bon accompagnement se fait avec une vraie discussion. Un client qui débute, qui change de matériel ou qui cherche le bon dosage n'a pas seulement besoin d'un catalogue : il a besoin d'être écouté, orienté et rassuré.
-        </p>
-
-        <div class="reason-grid">
-          <div class="reason">
-            <strong>Le bon dosage compte</strong>
-            <p>Un taux mal choisi peut provoquer inconfort, manque, irritation ou envie de reprendre la cigarette.</p>
-          </div>
-
-          <div class="reason">
-            <strong>Le matériel doit être adapté</strong>
-            <p>Puissance, tirage, résistance, autonomie : chaque détail change l'expérience du client.</p>
-          </div>
-
-          <div class="reason">
-            <strong>Les goûts sont personnels</strong>
-            <p>Classique, fruité, mentholé, gourmand : le bon liquide se trouve mieux avec un échange en boutique.</p>
-          </div>
-
-          <div class="reason">
-            <strong>Le suivi fait la différence</strong>
-            <p>Nous sommes là pour ajuster, expliquer et accompagner après l'achat si besoin.</p>
-          </div>
-        </div>
-
-        <div class="quote-line">
-          Nous ne vendons pas en ligne, parce que nous préférons vous vendre le bon produit.
-        </div>
-      </div>
+    <div class="strip-item">
+      <strong>4,9/5</strong>
+      <span>Note Google moyenne</span>
     </div>
-  </section>
 
-  <section class="products" id="produits">
-    <div class="container">
-      <div class="section-title">
-        <div class="label">Nos univers</div>
-        <h2>Tout pour vapoter, mais jamais sans conseil</h2>
-        <p>
-          Une sélection de produits pour les débutants, les habitués et les clients qui veulent améliorer leur confort au quotidien.
-        </p>
-      </div>
-
-      <div class="product-grid">
-        <article class="product-card">
-          <img src="images/materiel-cigarettes-electroniques.jpg" alt="Cigarettes électroniques STOOM">
-          <div class="product-card-content">
-            <h3>Matériel</h3>
-            <p>Pods, kits, box et cigarettes électroniques sélectionnés pour leur fiabilité et leur simplicité d'utilisation.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="images/eliquides-flavour-power.jpg" alt="E-liquides Flavour Power auvergnats">
-          <div class="product-card-content">
-            <h3>E-liquides</h3>
-            <p>Une large sélection de saveurs, avec notamment les e-liquides auvergnats Flavour Power.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="images/resistances-cartouches.jpg" alt="Résistances et cartouches pour cigarettes électroniques">
-          <div class="product-card-content">
-            <h3>Consommables</h3>
-            <p>Résistances, cartouches, pods de remplacement et accessoires pour entretenir votre matériel.</p>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="images/comptoir-stoom.jpg" alt="Comptoir conseil STOOM Clermont-Ferrand">
-          <div class="product-card-content">
-            <h3>Conseil</h3>
-            <p>Un accompagnement en boutique pour choisir le bon tirage, le bon dosage et le bon matériel.</p>
-          </div>
-        </article>
-      </div>
+    <div class="strip-item">
+      <strong>600+</strong>
+      <span>Avis clients</span>
     </div>
-  </section>
 
-  <section class="experience" id="conseil">
-    <div class="container experience-grid">
-      <div class="experience-photo">
-        <img src="images/interieur-magasin-stoom.jpg" alt="Intérieur du magasin STOOM Clermont-Ferrand">
-      </div>
-
-      <div class="experience-card">
-        <h2>Une vraie boutique, pas un simple catalogue</h2>
-        <p>
-          Notre rôle est de comprendre votre besoin avant de vous proposer un produit. Que vous soyez débutant, ancien fumeur, vapoteur régulier ou simplement en recherche d'un matériel plus adapté, nous prenons le temps de vous guider.
-        </p>
-
-        <div class="check-list">
-          <div class="check"><span>✓</span> Analyse de votre consommation et de vos habitudes.</div>
-          <div class="check"><span>✓</span> Choix du matériel selon votre tirage et votre besoin.</div>
-          <div class="check"><span>✓</span> Conseil sur le dosage de nicotine et les e-liquides.</div>
-          <div class="check"><span>✓</span> Explications simples pour bien utiliser votre cigarette électronique.</div>
-          <div class="check"><span>✓</span> Accompagnement après l'achat en cas de question ou de réglage.</div>
-        </div>
-      </div>
+    <div class="strip-item">
+      <strong>100%</strong>
+      <span>Conseil en boutique</span>
     </div>
-  </section>
 
-  <section class="reviews" id="avis">
-    <div class="container">
-      <div class="section-title">
-        <div class="label">Avis clients</div>
-        <h2>La confiance se construit en boutique</h2>
-        <p>
-          Les avis de nos clients reflètent notre priorité : un accueil sérieux, du conseil, du choix et un accompagnement humain.
-        </p>
-      </div>
-
-      <div class="reviews-top">
-        <div class="rating-card">
-          <div class="stars">★★★★★</div>
-          <h3>4,9/5</h3>
-          <p>Plus de 600 avis Google pour STOOM Clermont-Ferrand.</p>
-        </div>
-
-        <div class="review-grid">
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Très bons conseils, on prend le temps de vous expliquer ce qui est adapté à votre besoin.”</p>
-            <strong>Client STOOM</strong>
-          </article>
-
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Beaucoup de choix, un accueil professionnel et une vraie écoute. Rien à voir avec une commande en ligne.”</p>
-            <strong>Client STOOM</strong>
-          </article>
-
-          <article class="review">
-            <div class="stars">★★★★★</div>
-            <p>“Boutique sérieuse, conseils personnalisés et produits de qualité. Je recommande.”</p>
-            <strong>Client STOOM</strong>
-          </article>
-        </div>
-      </div>
+    <div class="strip-item">
+      <strong>FP</strong>
+      <span>E-liquides auvergnats Flavour Power</span>
     </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <div class="container contact-wrap">
-      <div class="contact-card">
-        <h2>Venir chez STOOM</h2>
-        <p>
-          Passez directement en boutique pour profiter d'un conseil personnalisé et repartir avec un produit réellement adapté.
-        </p>
+  </div>
 
-        <div class="info">
-          <div class="info-item">
-            <div class="info-icon">📍</div>
-            <div>
-              <strong>Adresse</strong>
-              <span>24 Rue Blatin<br>63000 Clermont-Ferrand</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">☎</div>
-            <div>
-              <strong>Téléphone</strong>
-              <span>04 73 90 29 40</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">🕒</div>
-            <div>
-              <strong>Horaires</strong>
-              <span>Lundi : 14h00 - 19h00<br>Mardi au samedi : 10h00 - 19h00</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">◎</div>
-            <div>
-              <strong>Instagram</strong>
-              <span>@stoom_clermont</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="map-card">
-        <iframe
-          title="Carte STOOM Clermont-Ferrand"
-          src="https://www.google.com/maps?q=24%20Rue%20Blatin%2063000%20Clermont-Ferrand&output=embed"
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </section>
+</div>
 
 </main>
 
-<footer>
-  <div class="container footer-inner">
-    <span>STOOM Clermont-Ferrand — Cigarettes électroniques, e-liquides auvergnats et conseil en boutique.</span>
-    <span>© STOOM — Tous droits réservés.</span>
-  </div>
-</footer>
-
 </body>
 </html>
-```
